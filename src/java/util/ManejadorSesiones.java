@@ -18,9 +18,9 @@ public class ManejadorSesiones {
         HttpSession s= req.getSession();
         if(s!=null){
         Object usuario= req.getSession().getAttribute("usuario"); //verificar como se maneja el usuario ingresado en la session
-        return usuario!=null && usuario.toString().trim().length()>0; //si el usuario es diferente de null y la cadena sin espacios es mayor cero tengo un usuario
-        }
-        else {
+            System.out.println("usuario: " + usuario);
+            return usuario!=null && usuario.toString().trim().length()>0; //si el usuario es diferente de null y la cadena sin espacios es mayor cero tengo un usuario
+        } else {
             return false;
         }
     }

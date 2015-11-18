@@ -9,8 +9,8 @@
 <!DOCTYPE html>
 <%
     ManejadorSesiones m= new ManejadorSesiones();
-    if(!m.usuarioEnSession(request)){
-        response.sendRedirect("Login.jsp");
+    if(!m.usuarioEnSession(request)) {
+        %> <script type="text/javascript">window.location.href = "Login.jsp"; </script> <%
     }
     
    %>
